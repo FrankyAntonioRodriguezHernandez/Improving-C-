@@ -2,6 +2,11 @@
 
 using namespace std;
 
+void TotalkWh(float arreglo[][30],int cantClientes, int dias);
+void Sobrepasan100kWh(float arreglo[][30],int cantClientes, int dias);
+float TotaldineroAPagar(float arreglo[][30],int cantClientes, int dias);
+void DiaMayorConsumo(float arreglo[][30],int cantClientes, int dias);
+void ClienteMenorConsumo(float arreglo[][30],int cantClientes, int dias);
 
 int main()
 {
@@ -69,6 +74,6 @@ int main()
             case 5:ClienteMenorConsumo(arreglo,cantClientes,dias);break;
         }
     }
-    
+
     return 0;
 }
