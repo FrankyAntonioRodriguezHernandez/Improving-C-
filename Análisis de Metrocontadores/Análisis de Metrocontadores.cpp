@@ -129,7 +129,6 @@ float TotaldineroAPagar(float arreglo[][30],int cantClientes, int dias){
                 aux=(total-300)*0.3 +49;
                 pagototal+=aux;
             }
-
             total=0.0;
             aux =0.0;
         }
