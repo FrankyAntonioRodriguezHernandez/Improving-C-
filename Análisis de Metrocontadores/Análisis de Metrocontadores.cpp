@@ -77,3 +77,15 @@ int main()
 
     return 0;
 }
+
+void TotalkWh(float arreglo[][30],int cantClientes, int dias){
+    float total=0.0;
+
+    for(int i=0;i<cantClientes;i++){
+        for(int j=0;j<dias;j++){
+            total+=arreglo[i][j];
+        }
+    }
+
+    cout<<"La cantidad total de kWh en el mes es de: "<<total<<endl;
+}
