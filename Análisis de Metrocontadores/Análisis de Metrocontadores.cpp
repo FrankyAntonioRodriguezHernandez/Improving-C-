@@ -155,3 +155,22 @@ void DiaMayorConsumo(float arreglo[][30],int cantClientes, int dias){
     mayordia++;
     cout<<"El dia de mayor consumo fue el: "<<mayordia <<endl;
 }
+
+void ClienteMenorConsumo(float arreglo[][30],int cantClientes, int dias){
+    float total=0.0;
+    float menor=999999.9;
+    int menordia;
+
+    for(int i=0;i<cantClientes;i++){
+            total=0.0;
+        for(int j=0;j<dias;j++){
+            total+=arreglo[i][j];
+        }
+        if(total<menor){
+            menor =total;
+            menordia = i;
+        }
+    }
+    menordia++;
+    cout<<"El cliente de menor consumo fue el: "<<menordia <<endl;
+}
