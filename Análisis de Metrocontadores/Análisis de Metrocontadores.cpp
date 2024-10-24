@@ -44,5 +44,31 @@ int main()
         cout<<"\n";
     }
     
+    while(opcion!=0){
+        cout<<"Digite la opcion deseada: "<<endl;
+        cout<<" \n"<<endl;
+        cout<<"1 Para saber el Total de kWh en el mes"<<endl;
+        cout<<"2 para saber la cantidad de lecturas que sobrepasen los 100kWh y el porciento que representa "<<endl;
+        cout<<"3 Para saber el Total de kWh en el mes"<<endl;
+        cout<<"4 Para saber el dia de mayor consumo"<<endl;
+        cout<<"5 Para saber el cliente de menor consumo"<<endl;
+        cout<<"0 para salir"<<endl;
+        cin>>opcion;
+        switch(opcion){
+
+            case 1:TotalkWh(arreglo,cantClientes,dias);break;
+
+            case 2:Sobrepasan100kWh(arreglo,cantClientes,dias);break;
+
+            case 3:pagototal= TotaldineroAPagar(arreglo,cantClientes,dias);
+                cout<<"EL dinero total a pagar de todas las lecturas es de: "<<pagototal<<endl;
+                break;
+
+            case 4:DiaMayorConsumo(arreglo,cantClientes,dias);break;
+
+            case 5:ClienteMenorConsumo(arreglo,cantClientes,dias);break;
+        }
+    }
+    
     return 0;
 }
