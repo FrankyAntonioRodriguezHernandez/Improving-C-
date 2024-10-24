@@ -136,3 +136,22 @@ float TotaldineroAPagar(float arreglo[][30],int cantClientes, int dias){
     }
     return pagototal;
 }
+
+void DiaMayorConsumo(float arreglo[][30],int cantClientes, int dias){
+    float total=0.0;
+    float mayor=0.0;
+    int mayordia;
+
+    for(int i=0;i<dias  ;i++){
+            total=0.0;
+        for(int j=0;j<cantClientes ;j++){
+            total+=arreglo[j][i];
+        }
+        if(total>mayor){
+            mayor =total;
+            mayordia = i;
+        }
+    }
+    mayordia++;
+    cout<<"El dia de mayor consumo fue el: "<<mayordia <<endl;
+}
