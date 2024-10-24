@@ -89,3 +89,20 @@ void TotalkWh(float arreglo[][30],int cantClientes, int dias){
 
     cout<<"La cantidad total de kWh en el mes es de: "<<total<<endl;
 }
+
+void Sobrepasan100kWh(float arreglo[][30],int cantClientes, int dias){
+    int total=0;
+    int contador=0;
+
+    for(int i=0;i<cantClientes;i++){
+        for(int j=0;j<dias;j++){
+            total++;
+            if(arreglo[i][j]>100){
+                contador++;
+            }
+        }
+    }
+
+    cout<<"La cantidad de lecturas que sobrepasan los 100kWh es de: "<<contador<<endl;
+    cout<<"y representa el "<<(contador*100)/total<<" %"<<endl;
+}
