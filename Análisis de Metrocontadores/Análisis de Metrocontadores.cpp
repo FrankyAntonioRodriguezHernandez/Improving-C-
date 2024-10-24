@@ -27,7 +27,15 @@ int main()
         }
     }
 
+    //Llenar el arreglo
+    for(int i=0;i<cantClientes;i++){
+        for(int j=0;j<dias;j++){
+            cout << "Digite el consumo del cliente: "<<i+1<<" en el dia: "<<j+1<< endl;
+            cin>>arreglo[i][j];
+        }
+    }
 
+    
     
     return 0;
 }
