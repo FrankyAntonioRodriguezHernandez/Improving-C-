@@ -106,3 +106,33 @@ void Sobrepasan100kWh(float arreglo[][30],int cantClientes, int dias){
     cout<<"La cantidad de lecturas que sobrepasan los 100kWh es de: "<<contador<<endl;
     cout<<"y representa el "<<(contador*100)/total<<" %"<<endl;
 }
+
+float TotaldineroAPagar(float arreglo[][30],int cantClientes, int dias){
+    float total=0.0;
+    float pagototal=0.0;
+    float aux =0.0;
+
+    for(int i=0;i<cantClientes;i++){
+
+        for(int j=0;j<dias;j++){
+            total+=arreglo[i][j];
+
+            if(total<=100){
+                aux= total*0.09;
+                pagototal+=aux;
+            }
+            else if(total>100 && total<=300){
+                aux=(total-100)*0.2 +9;
+                pagototal+=aux;
+            }
+            else if(total>300){
+                aux=(total-300)*0.3 +49;
+                pagototal+=aux;
+            }
+
+            total=0.0;
+            aux =0.0;
+        }
+    }
+    return pagototal;
+}
