@@ -35,7 +35,14 @@ int main()
         }
     }
 
-    
+    cout<<"\n"<<endl;
+    //muestro el arreglo
+    for(int i=0;i<cantClientes;i++){
+        for(int j=0;j<dias;j++){
+            cout<<arreglo[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
     
     return 0;
 }
