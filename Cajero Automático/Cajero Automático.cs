@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void IT(int tarjetas[],int pines[],int opc);//lo declaro primero porque lo utilizo en el subprograma ING y me da error si no lo declaro
+void IT(int tarjetas[],int pines[],int opc);
 
 int EX(int saldo){
     int S;
