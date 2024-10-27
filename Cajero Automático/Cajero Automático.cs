@@ -3,6 +3,22 @@ using namespace std;
 
 void IT(int tarjetas[],int pines[],int opc);//lo declaro primero porque lo utilizo en el subprograma ING y me da error si no lo declaro
 
+int EX(int saldo){
+    int S;
+	cout<<"El saldo de su tarjeta es de: "<<saldo<<endl;
+	cout<<"Cantidad de dinero a extraer: "<<endl;
+	cin>>S;
+	if(saldo>S){
+		saldo-=S;
+		cout<<"El saldo de su tarjeta ahora es de: "<<saldo<<endl;
+    }
+    else if(saldo<S){
+		cout<<"OPERACION DENEGADA"<<endl;
+		cout<<"Su saldo es insuficiente";
+	}
+	return saldo;
+}
+
 
 
 
