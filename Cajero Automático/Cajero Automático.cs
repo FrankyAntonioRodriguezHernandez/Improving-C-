@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+void IT(int tarjetas[],int pines[],int opc);//lo declaro primero porque lo utilizo en el subprograma ING y me da error si no lo declaro
+
+
+
+
 int main(){
 
     int tarjetas[]={(12345678),(87654321)};
