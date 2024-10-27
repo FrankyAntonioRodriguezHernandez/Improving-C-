@@ -64,6 +64,45 @@ void IT(int tarjetas[],int pines[],int opc){
 
 }
 
+void Anno(){
+    int opcion, total=0;
+    int a2020[12], a2021[12], a2022[12];
+    int a=3000;
+
+    for(int i=0;i<12;i++){
+        a2020[i]= a;
+        a+=500;
+        a2021[i]= a;
+        a+=500;
+        a2022[i]= a;
+        a+=500;
+    }
+
+    cout<<"Seleccione el a�o deseado para saber la cantidad de dinero substraido"<<endl;
+
+    cout<<"1 para 2020"<<endl;
+    cout<<"2 para 2021"<<endl;
+    cout<<"3 para 2022"<<endl;
+    cin>>opcion;
+    switch(opcion){
+        case 1:
+            for(int i=0;i<12;i++){
+                total+=a2020[i];
+            };break;
+        case 2:
+            for(int i=0;i<12;i++){
+                total+=a2021[i];
+            };break;
+        case 3:
+            for(int i=0;i<12;i++){
+                total+=a2022[i];
+            };break;
+    }
+
+    cout<<"La cantidad de dinero extraida ese a�o es: "<<total<<endl;
+
+}
+
 int main(){
 
     int tarjetas[]={(12345678),(87654321)};
