@@ -19,7 +19,18 @@ int EX(int saldo){
 	return saldo;
 }
 
+int ING(int saldo,int tarjetas[],int pines[], int opc){
+    int I;
 
+        IT(tarjetas,pines,opc);
+		cout<<"El saldo de su tarjeta es de: "<<saldo<<endl;
+		cout<<"Cantidad de dinero a ingresar: "<<endl;
+		cin>>I;
+		saldo=saldo+I;
+		cout<<"El saldo de su tarjeta ahora es de: "<<saldo<<endl;
+		return saldo;
+
+}
 
 
 int main(){
