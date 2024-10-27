@@ -29,9 +29,40 @@ int ING(int saldo,int tarjetas[],int pines[], int opc){
 		saldo=saldo+I;
 		cout<<"El saldo de su tarjeta ahora es de: "<<saldo<<endl;
 		return saldo;
-
 }
 
+void IT(int tarjetas[],int pines[],int opc){
+    int tarjeta, PT=-1, pin;
+
+
+    cout<<"Introduzca el numero de su tarjeta: "<<endl;
+	cin>>tarjeta;
+	for(int i=0;i<2; i++){
+		if(tarjeta==tarjetas[i]){
+		PT=i;
+		}
+	}
+	if(PT<0){
+		cout<<"Su tarjeta es incorrecta, introduzca su numero de tarjeta"<<endl;
+		IT(tarjetas,pines,opc);
+	}
+		cout<<"\n";
+	cout<<"Introduzca el pin de su tarjeta: ";cin>>pin;
+
+	if(pin!=pines[PT]){
+		for(int j=6; j>0; j--){
+
+		cout<<"Su pin es incorrecto, introduzca su pin de nuevo(tiene "<<j<<" intentos mas): "<<endl;
+		cin>>pin;
+			if(pin==pines[PT]){
+				break;
+			}
+		}
+		cout<<"Su tarjeta ha sido bloqueada"<<endl;
+            opc=0;
+	}
+
+}
 
 int main(){
 
